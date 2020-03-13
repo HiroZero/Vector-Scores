@@ -1,0 +1,49 @@
+#include <iostream>
+#include <algorithm>    
+#include <vector>
+#include <string>
+#include <ctime>
+#include <cstdlib>
+
+using namespace std;
+
+int main() { 
+	string input;
+	vector<string>scores;
+
+	cout << "enter score1" << endl;
+	cin >> input;
+	scores.push_back(input);	//puts stuff into the vectors
+
+	cout << "enter score2" << endl;
+	cin >> input;
+	scores.push_back(input);
+
+	cout << "enter score3" << endl;
+	cin >> input;
+	scores.push_back(input);
+
+	cout << "enter score4" << endl;
+	cin >> input;
+	scores.push_back(input);
+
+	cout << "enter score5" << endl;
+	cin >> input;
+	scores.push_back(input);
+
+
+
+	cout <<"Here are your scores." << endl;
+	for (int i = 0; i < 5; i++)
+		cout << scores.at(i) << ' ' << endl;
+	cout << endl << endl;
+
+	sort(scores.begin(), scores.begin() + 4);
+
+	cout << "Here are your scores in order." << endl;
+	for (int i = 0; i < 5; i++)
+		cout << scores.at(i) << endl;
+		cout << endl << endl;
+
+	cout << "Your Top Score Is "<<scores.at(4) << endl;
+}
